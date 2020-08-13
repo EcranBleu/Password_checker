@@ -11,7 +11,7 @@ def main(args):
         hashed_pwd = hashlib.sha1(str.encode(argument)).hexdigest()
         hash_prefix, hash_suffix = hashed_pwd[0:5], hashed_pwd[5:].upper()
 
-        # We then form the query to HaveIBeenPwned.com by grouping the API base URL and the first 5 characters of the hash
+        # We form the query to HaveIBeenPwned.com by grouping the API base URL and the first 5 characters of the hash
         url = 'https://api.pwnedpasswords.com/range/' + hash_prefix
 
         # We create a request object and split the text of that request into a list
