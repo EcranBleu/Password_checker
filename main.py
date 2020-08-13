@@ -15,7 +15,7 @@ for argument in passwords:
     # We then form the query to HaveIBeenPwned.com by grouping the API base URL and the first 5 characters of the hash
     url = 'https://api.pwnedpasswords.com/range/' + hash_prefix
 
-    # We create a request object, split the text of that request into a list and create the suffix to match in said list
+    # We create a request object and split the text of that request into a list
     r = requests.get(url)
     suffix_list = r.text.splitlines()
 
